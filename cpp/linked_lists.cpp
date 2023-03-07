@@ -45,7 +45,9 @@ class LinkedList
 int main(){
 
     Node* n1 = new Node(1);
-
+    Node* n2 = new Node(2);
+    n1.setNext(n2);
+    
 
 
 
