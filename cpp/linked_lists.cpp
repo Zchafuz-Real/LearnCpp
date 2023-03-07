@@ -26,12 +26,14 @@ class LinkedList
         int length = 0;
         Node* head = nullptr;
     public:
-        LinkedList(Node* n): head(n) {};
+        LinkedList(Node* n = nullptr): head(n) {};
         void setHead(Node* n) {
             head = n;
         }
+
         int length_f(){
-            Node* current = head;
+            Node* current;
+            
             int count = 0;
             while (current->getNext() != nullptr){
                 current = current->getNext();
@@ -46,8 +48,13 @@ int main(){
 
     Node* n1 = new Node(1);
     Node* n2 = new Node(2);
-    n1.setNext(n2);
+    n1->setNext(n2);
 
+    LinkedList LL;
+    LL.setHead(n1);
+    int lent = LL.length_f();
+
+    cout << lent << endl;
     return 0;
 };
 
